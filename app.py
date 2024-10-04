@@ -23,7 +23,7 @@ def login_page():
     if form.validate_on_submit():
         new_user = models.User.load(form.email.data)
         print(new_user.password_hash)
-        if new_user == None or not new_user.check_password(form.password.data):
+        if new_user is None or not new_user.check_password(form.password.data):
             print(new_user)
             print(new_user.check_password(form.password.data))
             print("There was an error")

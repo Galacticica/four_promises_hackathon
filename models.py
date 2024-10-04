@@ -69,7 +69,7 @@ class User(UserMixin):
                 print(row)
                 if row['email'] == email:
                     user = User(row['name'], row['email'])
-                    # user.set_password(row['pwdigest'])
+                    user.set_password(row['pwdigest'])
                     return user
             return None
 
