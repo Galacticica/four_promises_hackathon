@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            God Talk
+        </title>
+        <style>
+            h1{
+                font-size: 50px;
+            }
+            body {
+                background: rgb(57, 92, 141)
+            }
+        </style>
+    </head>
+    <body>
+        <h1>God Talk</h1>
+        <p>test page works</p>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.text.label }}<br>
+                {{ form.text(size=32) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html> 

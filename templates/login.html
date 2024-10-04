@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            God Talk
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h1 id="site_title">God Talk</h1>
+        <form method="post" action="">
+            {{ form.hidden_tag() }}
+            <p id="email">
+                {{form.email.label}}<br>
+                {{form.email(size=32)}}
+            </p>
+            <p id="password">
+                {{form.password.label}}<br>
+                {{form.password(size=32)}}
+            </p>
+            <p id="submit">
+                {{form.submit()}}
+            </p>
+        </form>
+        <a href="/signup">Create An Account</a>
+    </body>
+</html> 

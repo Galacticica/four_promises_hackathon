@@ -1,0 +1,16 @@
+[project]
+name = "four-promises-hackathon"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.0.3",
+    "flask-wtf>=1.2.1",
+    "flask-login>=0.6.3",
+    "flask-bcrypt>=1.0.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            God Talk
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h1 id="site_title">God Talk</h1>
+        <nav id="nav_bar"><a href="/home">Home</a></nav>
+        <form method="post" action="">
+            {{ form.hidden_tag() }}
+            <p id="answer">
+                {{form.question.label}}<br>
+                {{form.question(size=32)}}
+            </p>
+            <p id="submit">
+                {{form.submit()}}
+            </p>
+        </form>
+    </body>
+</html> 

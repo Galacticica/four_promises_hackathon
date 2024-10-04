@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            God Talk
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h1 id="site_title">God Talk</h1>
+        <nav id="nav_bar">
+            <a href="/home">Home</a>
+        </nav>
+        <h1><b>{{question}}</b></h1>
+        <h2>- {{userid}}</h2>
+
+        <form method="post" action="">
+            {{ form.hidden_tag() }}
+            <p id="answer">
+                {{form.response.label}}<br>
+                {{form.response(size=32)}}
+            </p>
+            <p id="submit">
+                {{form.submit()}}
+            </p>
+        </form>
+
+        {% if responses == [] %}
+            <p>Be the first to respond!</p>
+        {% else %}
+            {% for response in responses %}
+                <div><p>
+                    {{ response['userid'] }} says: {{ response['response'] }}
+                </p></div>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html> 
